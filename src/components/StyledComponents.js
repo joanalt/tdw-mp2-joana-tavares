@@ -28,3 +28,24 @@ export const Titulo = styled.h1`
   text-align: center;
   color: #97ce4c;
 `;
+
+export const Oooweee = styled.img`
+  width: 500px;
+  margin-top: 30px;
+  margin-left: 30px;
+`;
+
+export const About = styled.div`
+  display: flex;
+`;
+
+export const Subtitulo = styled.h3`
+  color: #97ce4c;
+  margin-top: 50px;
+  margin-left: 50px;
+`;
+
+export const Texto = styled.p`
+  margin-left: 50px;
+  margin-right: 50px;
+`;
