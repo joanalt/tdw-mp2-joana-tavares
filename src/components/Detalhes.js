@@ -3,7 +3,9 @@ import Header from "./Header";
 
 function Detalhes() {
   return (
-    <Header />
+    <>
+      <Header />
+    </>
   );
 }
 

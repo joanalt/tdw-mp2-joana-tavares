@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Nav, Options, Titulo } from "./StyledComponents";
+import { Nav, Logo, Options } from "./StyledComponents";
 
 function Header() {
   return (
@@ -8,7 +8,9 @@ function Header() {
       <Nav>
         <Options>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <Logo alt="logo" src="/images/logo.png" />
+            </Link>
           </li>
           <li>
             <Link to="/Detalhes">Detalhes</Link>
@@ -18,10 +20,6 @@ function Header() {
           </li>
         </Options>
       </Nav>
-
-      <header>
-        <Titulo>Pickle Rick welcomes you</Titulo>
-      </header>
     </div>
   );
 }
