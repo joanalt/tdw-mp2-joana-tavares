@@ -22,6 +22,11 @@ function Sobre() {
             scenarios: domestic family drama, and an alcoholic grandfather
             dragging his grandson into hijinks.
           </Texto>
+          <Subtitulo>Info dor geeks</Subtitulo>
+          <Texto>Number of characters:</Texto>
+          <Texto>Number of seasons:</Texto>
+          <Texto>Number of episodes:</Texto>
+          <Texto>First episode aired on:</Texto>
           <Subtitulo>Copyright</Subtitulo>
           <Texto>
             The data and images are used without claim of ownership and belong
