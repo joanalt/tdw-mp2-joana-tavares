@@ -13,10 +13,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/Detalhes">Detalhes</Link>
-          </li>
-          <li>
-            <Link to="/Sobre">Sobre</Link>
+            <Link to="/Sobre">About</Link>
           </li>
         </Options>
       </Nav>
