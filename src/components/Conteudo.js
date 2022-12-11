@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import {
   Titulo,
+  Input,
+  Search,
   Personagens,
   Background,
   Nome,
   Status,
-  Circulo,
+  Alive,
+  Dead,
+  Unknown,
   Botoes,
+  Botao,
+  Foto,
+  Error404,
 } from "./StyledComponents";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -67,12 +74,14 @@ function Conteudo() {
       <Titulo alt="Rick and Morty" src="/images/RickandMorty.png" />
       <Botoes>
         <form onSubmit={searchCharacter}>
-          <input id="search" />
-          <button type="submit">Search</button>
+          <Input id="search" />
+          <Search type="submit">Search</Search>
         </form>
       </Botoes>
-      {characters.status == "error" ? (
-        <h1>404 not found</h1>
+      {characters.status === "error" ? (
+        <div>
+          <Error404 alt="404 not found" src="/images/crying.png" />
+        </div>
       ) : (
         <Personagens>
           {characters.characters[search] != null &&
@@ -80,10 +89,14 @@ function Conteudo() {
             characters.characters[search][page].map((character) => {
               return (
                 <Background key={character.id}>
-                  <img src={character.image} alt={character.name} />
+                  <Link to="/Detalhes">
+                    <Foto src={character.image} alt={character.name} />
+                  </Link>
                   <Nome>{character.name}</Nome>
                   <Status>
-                    <Circulo />
+                    {character.status === "Alive" && <Alive />}
+                    {character.status === "Dead" && <Dead />}
+                    {character.status === "unknown" && <Unknown />}
                     <p>{character.status}</p>
                   </Status>
                 </Background>
@@ -92,11 +105,11 @@ function Conteudo() {
         </Personagens>
       )}
       <Botoes>
-        {page > 1 && <button onClick={previous}>Previous</button>}
+        {page > 1 && <Botao onClick={previous}>Previous</Botao>}
         {characters.characters[search] != null &&
           characters.characters[search][0] != null &&
           page < characters.characters[search][0] && (
-            <button onClick={next}>Next</button>
+            <Botao onClick={next}>Next</Botao>
           )}
       </Botoes>
     </>

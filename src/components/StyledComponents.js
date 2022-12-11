@@ -30,7 +30,31 @@ export const Titulo = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 550px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`;
+
+export const Input = styled.input`
+border-radius: 5px;
+padding: 7.5px;
+font-size: medium;
+width: 400px;
+}
+`;
+
+export const Search = styled.button`
+  background-color: #202329;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-size: medium;
+  cursor: pointer;
+  &:hover {
+    background-color: #97ce4c;
+  }
 `;
 
 export const Personagens = styled.div`
@@ -51,10 +75,26 @@ export const Nome = styled.h2`
   margin-left: 15px;
 `;
 
-export const Circulo = styled.p`
+export const Alive = styled.p`
   height: 0.5rem;
   width: 0.5rem;
   background: rgb(85, 204, 68);
+  border-radius: 50%;
+  margin-right: 10px;
+`;
+
+export const Dead = styled.p`
+  height: 0.5rem;
+  width: 0.5rem;
+  background: rgb(214, 61, 46);
+  border-radius: 50%;
+  margin-right: 10px;
+`;
+
+export const Unknown = styled.p`
+  height: 0.5rem;
+  width: 0.5rem;
+  background: #878787;
   border-radius: 50%;
   margin-right: 10px;
 `;
@@ -70,6 +110,32 @@ export const Botoes = styled.div`
   align-items: center;
   justify-content: center;
   margin: 15px;
+`;
+
+export const Botao = styled.button`
+  background-color: #ffffff;
+  color: #202329;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-size: medium;
+  cursor: pointer;
+  &:hover {
+    color: #97ce4c;
+  }
+`;
+
+export const Foto = styled.img`
+  width: 300px;
+  height: 300 px;
+`;
+
+export const Error404 = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
 `;
 
 //Sobre
