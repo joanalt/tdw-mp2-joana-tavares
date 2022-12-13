@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import sobre from "../images/about.jpg";
 import { Oooweee, Subtitulo, Texto, About } from "./StyledComponents";
 
 function Sobre() {
@@ -7,7 +8,7 @@ function Sobre() {
     <>
       <Header />
       <About>
-        <Oooweee alt="oooweee" src="/images/about.jpg" />
+        <Oooweee alt="oooweee" src={sobre} />
         <div>
           <Subtitulo>About</Subtitulo>
           <Texto>
