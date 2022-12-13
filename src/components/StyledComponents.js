@@ -71,6 +71,40 @@ export const Background = styled.div`
   width: 300px;
 `;
 
+export const Botoes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+`;
+
+export const Botao = styled.button`
+  background-color: #ffffff;
+  color: #202329;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-size: medium;
+  cursor: pointer;
+  &:hover {
+    color: #97ce4c;
+  }
+`;
+
+export const Error404 = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+`;
+
+//Conteudo + Detalhes
+export const Foto = styled.img`
+  width: 300px;
+  height: 300 px;
+`;
+
 export const Nome = styled.h2`
   margin-left: 15px;
 `;
@@ -105,39 +139,16 @@ export const Status = styled.div`
   margin-left: 15px;
 `;
 
-export const Botoes = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//Detalhes
+export const BgDetalhes = styled.div`
+  background-color: #202329;
+  color: #ffffff;
   margin: 15px;
+  border-radius: 0.5rem;
+  display: flex;
+  width: 900px;
+  margin-top: 60px;
 `;
-
-export const Botao = styled.button`
-  background-color: #ffffff;
-  color: #202329;
-  border: none;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 10px;
-  font-size: medium;
-  cursor: pointer;
-  &:hover {
-    color: #97ce4c;
-  }
-`;
-
-export const Foto = styled.img`
-  width: 300px;
-  height: 300 px;
-`;
-
-export const Error404 = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1000px;
-`;
-
 //Sobre
 export const About = styled.div`
   display: flex;

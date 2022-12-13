@@ -47,6 +47,6 @@ export const charactersSlice = createSlice({
   },
 });
 
-export const selecteCharacters = (state) => state.characters;
+export const selectCharacters = (state) => state.characters;
 
 export default charactersSlice.reducer;

@@ -20,11 +20,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchCharactersAsync,
-  selecteCharacters,
+  selectCharacters,
 } from "../redux/charactersSlice";
 
 function Conteudo() {
-  const characters = useSelector(selecteCharacters);
+  const characters = useSelector(selectCharacters);
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -89,7 +89,10 @@ function Conteudo() {
             characters.characters[search][page].map((character) => {
               return (
                 <Background key={character.id}>
-                  <Link to="/Detalhes">
+                  <Link
+                    to={`/Detalhes/${character.id}`}
+                    state={{ data: character }}
+                  >
                     <Foto src={character.image} alt={character.name} />
                   </Link>
                   <Nome>{character.name}</Nome>
