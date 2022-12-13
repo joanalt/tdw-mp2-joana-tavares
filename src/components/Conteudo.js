@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
+import titulo from "../images/RickandMorty.png";
+import crying from "../images/crying.png";
 import {
   Titulo,
   Input,
@@ -71,7 +73,7 @@ function Conteudo() {
   return (
     <>
       <Header />
-      <Titulo alt="Rick and Morty" src="/images/RickandMorty.png" />
+      <Titulo alt="Rick and Morty" src={titulo} />
       <Botoes>
         <form onSubmit={searchCharacter}>
           <Input id="search" />
@@ -80,7 +82,7 @@ function Conteudo() {
       </Botoes>
       {characters.status === "error" ? (
         <div>
-          <Error404 alt="404 not found" src="/images/crying.png" />
+          <Error404 alt="404 not found" src={crying} />
         </div>
       ) : (
         <Personagens>

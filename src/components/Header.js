@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 import { Nav, Logo, Options } from "./StyledComponents";
 
 function Header() {
@@ -9,7 +10,7 @@ function Header() {
         <Options>
           <li>
             <Link to="/">
-              <Logo alt="logo" src="/images/logo.png" />
+              <Logo alt="logo" src={logo} />
             </Link>
           </li>
           <li>
