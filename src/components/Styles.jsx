@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import fundo from "../images/detalhes.png";
 
 //Header
 export const Nav = styled.nav`
@@ -32,10 +33,10 @@ export const Titulo = styled.img`
 `;
 
 export const Input = styled.input`
-border-radius: 5px;
+border-radius: 40px;
 padding: 7.5px;
 font-size: medium;
-width: 400px;
+width: 300px;
 }
 `;
 
@@ -43,10 +44,9 @@ export const Search = styled.button`
   background-color: #202329;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 40px;
   margin: 5px;
   padding: 10px;
-  font-size: medium;
   cursor: pointer;
   &:hover {
     background-color: #97ce4c;
@@ -132,9 +132,12 @@ export const BgDetalhes = styled.div`
   color: #ffffff;
   margin: 15px;
   border-radius: 0.5rem;
-  display: flex;
-  width: 900px;
   margin-top: 60px;
+  width: 30%;
+`;
+
+export const Fundo = styled.div`
+  background: url(${fundo});
 `;
 
 //Sobre

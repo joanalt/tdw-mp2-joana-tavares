@@ -72,12 +72,17 @@ function Conteudo() {
     <>
       <Header />
       <Titulo alt="Rick and Morty" src={titulo} />
-      <Botoes>
-        <form onSubmit={searchCharacter}>
-          <Input id="search" />
-          <Search type="submit">Search</Search>
-        </form>
-      </Botoes>
+      <form
+        onSubmit={searchCharacter}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "30px",
+        }}
+      >
+        <Input id="search" />
+        <Search type="submit">Search</Search>
+      </form>
       {characters.status === "error" ? (
         <div>
           <Error404 alt="404 not found" src={crying} />
