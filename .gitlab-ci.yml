@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - install
   - validation
+  - build
 
 cache:
   key: $CI_COMMIT_REF_SLUG
@@ -37,3 +38,15 @@ jest:
     - install
   script:
     - npm test
+
+build:
+  stage: build
+  script:
+    - npm run build
+  rules:
+    - if: $CI_COMMIT_REF_NAME == 'main' #corre apenas nesta branch
+      when: on_success #apenas se os passos anteriores for bem sucedidos
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 day
