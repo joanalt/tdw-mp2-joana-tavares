@@ -20,6 +20,8 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "jest",
+    "lint": "next lint",
+    "prettier": "prettier --write .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
