@@ -9,16 +9,14 @@ import {
   Search,
   Personagens,
   Background,
-  Nome,
   Status,
   Alive,
   Dead,
   Unknown,
   Botoes,
   Botao,
-  Foto,
   Error404,
-} from "./StyledComponents.jsx";
+} from "./Styles.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchCharactersAsync,
@@ -95,9 +93,13 @@ function Conteudo() {
                     to={`/Detalhes/${character.id}`}
                     state={{ data: character }}
                   >
-                    <Foto src={character.image} alt={character.name} />
+                    <img
+                      src={character.image}
+                      alt={character.name}
+                      style={{ width: "300px" }}
+                    />
                   </Link>
-                  <Nome>{character.name}</Nome>
+                  <h2 style={{ marginLeft: "15px" }}>{character.name}</h2>
                   <Status>
                     {character.status === "Alive" && <Alive />}
                     {character.status === "Dead" && <Dead />}

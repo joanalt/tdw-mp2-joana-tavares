@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header";
 import sobre from "../images/about.jpg";
-import { Oooweee, Subtitulo, Texto, About } from "./StyledComponents.jsx";
+import { Oooweee, Subtitulo, Texto } from "./Styles.jsx";
 
 function Sobre() {
   return (
     <>
       <Header />
-      <About>
+      <div style={{ display: "flex" }}>
         <Oooweee alt="oooweee" src={sobre} />
         <div>
           <Subtitulo>About</Subtitulo>
@@ -36,7 +36,7 @@ function Sobre() {
             to their respective owners.
           </Texto>
         </div>
-      </About>
+      </div>
     </>
   );
 }

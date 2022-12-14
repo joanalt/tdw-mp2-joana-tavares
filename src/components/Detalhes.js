@@ -1,16 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { useParams, useLocation } from "react-router-dom";
-import {
-  FotoD,
-  Alive,
-  Dead,
-  Unknown,
-  StatusD,
-  Personagens,
-  BgDetalhes,
-  BgPagD,
-} from "./StyledComponents.jsx";
+import { BgDetalhes, Alive, Dead, Unknown, Personagens } from "./Styles.jsx";
 
 function Detalhes() {
   const { id } = useParams();
@@ -20,43 +11,46 @@ function Detalhes() {
   if (character != null)
     return (
       <>
-        <BgPagD>
-          <Header />
-          <Personagens>
-            <BgDetalhes key={id}>
-              <FotoD src={character.data.image} alt={character.data.name} />
-              <div style={{ marginLeft: "30px" }}>
-                <h1>{character.data.name}</h1>
-                <StatusD>
-                  {character.data.status === "Alive" && <Alive />}
-                  {character.data.status === "Dead" && <Dead />}
-                  {character.data.status === "unknown" && <Unknown />}
-                  <p>{character.data.status}</p>
-                </StatusD>
-                <p>
-                  <b>Species: </b>
-                  {character.data.species}
-                </p>
-                <p>
-                  <b>Type: </b>
-                  {character.data.type}
-                </p>
-                <p>
-                  <b>Gender: </b>
-                  {character.data.gender}
-                </p>
-                <p>
-                  <b>Origin: </b>
-                  {character.data.origin.name}
-                </p>
-                <p>
-                  <b>Last known location: </b>
-                  {character.data.location.name}
-                </p>
+        {" "}
+        <Header />
+        <Personagens>
+          <BgDetalhes key={id}>
+            <img
+              src={character.data.image}
+              alt={character.data.name}
+              style={{ width: "40%" }}
+            />
+            <div style={{ marginLeft: "30px" }}>
+              <h1>{character.data.name}</h1>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                {character.data.status === "Alive" && <Alive />}
+                {character.data.status === "Dead" && <Dead />}
+                {character.data.status === "unknown" && <Unknown />}
+                <p>{character.data.status}</p>
               </div>
-            </BgDetalhes>
-          </Personagens>
-        </BgPagD>
+              <p>
+                <b>Species: </b>
+                {character.data.species}
+              </p>
+              <p>
+                <b>Type: </b>
+                {character.data.type}
+              </p>
+              <p>
+                <b>Gender: </b>
+                {character.data.gender}
+              </p>
+              <p>
+                <b>Origin: </b>
+                {character.data.origin.name}
+              </p>
+              <p>
+                <b>Last known location: </b>
+                {character.data.location.name}
+              </p>
+            </div>
+          </BgDetalhes>
+        </Personagens>{" "}
       </>
     );
   else return null;
