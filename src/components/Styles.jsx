@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import fundo from "../images/detalhes.png"
+import fundo from "../images/detalhes.png";
 
 //Header
 export const Nav = styled.nav`
@@ -137,8 +137,7 @@ export const BgDetalhes = styled.div`
 `;
 
 export const Fundo = styled.div`
-background:url(${fundo});
-
+  background: url(${fundo});
 `;
 
 //Sobre
