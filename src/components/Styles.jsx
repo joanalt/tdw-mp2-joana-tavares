@@ -1,14 +1,9 @@
 import styled from "styled-components";
-import details from "../images/details.png";
 
 //Header
 export const Nav = styled.nav`
   background-color: #202329;
   display: flex;
-`;
-
-export const Logo = styled.img`
-  width: 75px;
 `;
 
 export const Options = styled.ul`
@@ -58,26 +53,12 @@ export const Search = styled.button`
   }
 `;
 
-export const Personagens = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
 export const Background = styled.div`
   background-color: #202329;
   color: #ffffff;
   margin: 15px;
   border-radius: 0.5rem;
   width: 300px;
-`;
-
-export const Foto = styled.img`
-  width: 300px;
-`;
-
-export const Nome = styled.h2`
-  margin-left: 15px;
 `;
 
 export const Botoes = styled.div`
@@ -115,6 +96,12 @@ export const Status = styled.div`
 `;
 
 //Conteudo + Detalhes
+export const Personagens = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 export const Alive = styled.p`
   height: 0.5rem;
   width: 0.5rem;
@@ -140,10 +127,6 @@ export const Unknown = styled.p`
 `;
 
 //Detalhes
-export const BgPagD = styled.div`
-  background-image: url(${details});
-`;
-
 export const BgDetalhes = styled.div`
   background-color: #202329;
   color: #ffffff;
@@ -154,20 +137,7 @@ export const BgDetalhes = styled.div`
   margin-top: 60px;
 `;
 
-export const FotoD = styled.img`
-  width: 40%;
-`;
-
-export const StatusD = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 //Sobre
-export const About = styled.div`
-  display: flex;
-`;
-
 export const Oooweee = styled.img`
   width: 350px;
   margin-top: 30px;
