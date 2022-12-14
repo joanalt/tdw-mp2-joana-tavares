@@ -42,7 +42,7 @@ jest:
 build:
   stage: build
   script:
-    - npm run build
+    - echo "Building site"
   rules:
     - if: $CI_COMMIT_REF_NAME == 'main' #corre apenas nesta branch
       when: on_success #apenas se os passos anteriores for bem sucedidos
