@@ -4,10 +4,11 @@ import { fetchCharacters } from "./requests";
 const initialState = {
   status: "idle",
   characters: {},
+  character: {},
 };
 
 export const fetchCharactersAsync = createAsyncThunk(
-  "characters/fetchCharacters",
+  "fetchCharacters",
   async (info) => {
     const response = await fetchCharacters(info.text, info.page);
     return {

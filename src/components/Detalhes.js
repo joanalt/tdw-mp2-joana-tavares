@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import { useParams, useLocation } from "react-router-dom";
-//import { useSelector } from "react-redux";
 import {
   FotoD,
   Alive,
@@ -11,19 +10,12 @@ import {
   Personagens,
   BgDetalhes,
   BgPagD,
-} from "./StyledComponents";
-//import { selectCharacters } from "../redux/charactersSlice";
+} from "./StyledComponents.jsx";
 
 function Detalhes() {
-  //const characters = useSelector(selectCharacters);
   const { id } = useParams();
   const location = useLocation();
   const character = location.state;
-
-  /*const character = characters.characters[""][~~(id / 20) + 1][(id % 20) - 1];
-  console.log(characters.characters[""][~~(id / 20) + 1][(id % 20) - 1]);
-
-  //criar um novo atributo no estado do redux para guardar a info das personagens individualmente*/
 
   if (character != null)
     return (
@@ -42,20 +34,24 @@ function Detalhes() {
                   <p>{character.data.status}</p>
                 </StatusD>
                 <p>
-                  <b>Species:</b>
-                  {character.species}
+                  <b>Species: </b>
+                  {character.data.species}
                 </p>
                 <p>
-                  <b>Type:</b> {character.type}
+                  <b>Type: </b>
+                  {character.data.type}
                 </p>
                 <p>
-                  <b>Gender:</b> {character.gender}
+                  <b>Gender: </b>
+                  {character.data.gender}
                 </p>
                 <p>
-                  <b>Origin:</b> {character.origin}
+                  <b>Origin: </b>
+                  {character.data.origin.name}
                 </p>
                 <p>
-                  <b>Last known location:</b> {character.location}
+                  <b>Last known location: </b>
+                  {character.data.location.name}
                 </p>
               </div>
             </BgDetalhes>

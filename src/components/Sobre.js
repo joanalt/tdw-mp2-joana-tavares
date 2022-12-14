@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import sobre from "../images/about.jpg";
-import { Oooweee, Subtitulo, Texto, About } from "./StyledComponents";
+import { Oooweee, Subtitulo, Texto, About } from "./StyledComponents.jsx";
 
 function Sobre() {
   return (
