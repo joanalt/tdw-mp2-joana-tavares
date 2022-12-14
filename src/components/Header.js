@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import { Nav, Logo, Options } from "./StyledComponents";
+import { Nav, Logo, Options } from "./StyledComponents.jsx";
 
 function Header() {
   return (

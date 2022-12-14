@@ -18,7 +18,7 @@ import {
   Botao,
   Foto,
   Error404,
-} from "./StyledComponents";
+} from "./StyledComponents.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchCharactersAsync,
