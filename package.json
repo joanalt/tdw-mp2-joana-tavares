@@ -19,9 +19,9 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
+    "test": "jest",
     "prettier": "prettier --write .",
     "lint": "next lint",
-    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
