@@ -22,7 +22,8 @@
     "prettier": "prettier --write .",
     "lint": "eslint . --ext js,jsx,ts,tsx --fix",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "babel-jest": "23.6.0"
   },
   "eslintConfig": {
     "extends": [
