@@ -19,21 +19,15 @@ install:
 
 prettier:
   stage: validation
-  dependencies:
-    - install
   script:
     - npm run prettier
 
 lint:
   stage: validation
-  dependencies:
-    - install
   script:
     - npm run lint
 
 jest:
   stage: validation
-  dependencies:
-    - install
   script:
     - npm test
