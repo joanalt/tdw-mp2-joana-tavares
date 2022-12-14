@@ -7,10 +7,14 @@ function Sobre() {
   return (
     <>
       <Header />
-      <div style={{ display: "flex" }}>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
         <Oooweee alt="oooweee" src={sobre} />
         <div>
-          <Subtitulo>About</Subtitulo>
+          <Subtitulo>About the show</Subtitulo>
           <Texto>
             Rick and Morty, created by Dan Harmon and Justin Roiland for Adult
             Swim, is an animated series that follows the misadventures of
@@ -23,12 +27,15 @@ function Sobre() {
             scenarios: domestic family drama, and an alcoholic grandfather
             dragging his grandson into hijinks.
           </Texto>
-          <Subtitulo>Info for geeks</Subtitulo>
+          <Subtitulo>About the project</Subtitulo>
           <Texto>
-            Rick and Morty has 826 characters that can be seen over 6 season.
-            Yes, over 60 episodes of pure adventure!!!! The first episode aired
-            on December 2nd of 2013 and the last one (for now we hope) aired 9
-            years and 1 day later, on December 4th of 2022.
+            Over time, Internet is increasingly focused on aspects of
+            information, rather than its production. For the Curricular Unit of
+            Technologies and Web Development, students were challenged to create
+            a front-end application in React.js to consume and visualize
+            information from any public data source, at their choice. The
+            technologies I used for this challenge were: React, React Router,
+            Axious and Redux toolkit.
           </Texto>
           <Subtitulo>Copyright</Subtitulo>
           <Texto>
