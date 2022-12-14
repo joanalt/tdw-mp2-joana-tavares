@@ -33,9 +33,9 @@ function Sobre() {
             information, rather than its production. For the Curricular Unit of
             Technologies and Web Development, students were challenged to create
             a front-end application in React.js to consume and visualize
-            information from any public data source, at their choice. The
-            technologies I used for this challenge were: React, React Router,
-            Axious and Redux toolkit.
+            information from any public data source, at their choice. For this
+            project I used Rick and Morty API and the technologies I used for
+            this challenge were: React, React Router, Axious and Redux toolkit.
           </Texto>
           <Subtitulo>Copyright</Subtitulo>
           <Texto>
