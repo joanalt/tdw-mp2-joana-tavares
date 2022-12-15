@@ -12,40 +12,32 @@ install:
     - npm install
   artifacts:
     paths:
-      - node_modules/
+      - node_modules/ #"cache" para os módulos externos dos quais seu projeto depende.
 
 prettier:
   stage: validation
-  dependencies:
-    - install
   script:
     - npm run prettier
 
 lint:
   stage: validation
-  dependencies:
-    - install
   script:
     - npm run lint
 
-jest:
+test:
   stage: validation
-  dependencies:
-    - install
   script:
-    - npm test
+    - npm run --passWithNoTests
 
 build:
   stage: build
   script:
     - npm run build
-  rules:
-    - if: $CI_COMMIT_REF_NAME == 'main'
-      when: on_success
-      allow_failure: false
   artifacts:
     paths:
       - build/
+  rules:
+    - if: "$CI_COMMIT_BRANCH == 'main'"
 
 deploy:
   stage: deploy
