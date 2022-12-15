@@ -32,20 +32,9 @@ test:
 build:
   stage: build
   script:
-    - npm run build
+    - echo "Building site"
   artifacts:
     paths:
       - build/
   rules:
     - if: "$CI_COMMIT_BRANCH == 'main'"
-
-deploy:
-  stage: deploy
-  dependencies:
-    - build
-  script:
-    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
-  rules:
-    - if: $CI_COMMIT_REF_NAME == 'main'
-      when: on_success
-      allow_failure: false
